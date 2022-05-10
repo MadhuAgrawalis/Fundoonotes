@@ -1,0 +1,25 @@
+<div fxLayoutAlign="center none" class="main-note-div">
+    <div class="notemain" *ngIf="isVisible" (click)="fieldClick()">
+        <mat-card class="addnote">
+            <input type="text" class="input" placeholder="Take a note...">
+            <span fxLayout="row" *ngIf="isVisible" fxLayout="space between end " fxLayout="2px">
+                <img src="../../../assets/icons/check_box_black_24dp.svg" alt="" style="margin-left: 7px;" >
+                <img src="../../../assets/icons/brush_black_24dp.svg" alt="" style="margin-left: 7px;" >
+                <img src="../../../assets/icons/insert_photo_black_24dp.svg" alt="" style="margin-left: 4px;">
+            </span>
+        </mat-card>
+    </div>
+
+    <div *ngIf="!isVisible" class="notemain">
+        <mat-card class="addnote">
+            <input type="text" #txt class="input" placeholder="Title">
+            <textarea style="overflow: hidden;" #desc class="input notecontent" placeholder="Take a note..."></textarea>
+            <div class="iconstab">
+                <div>
+                    <app-icons></app-icons>
+                </div>
+                <span><button (click)="addnote(txt,desc)" mat-button class="closebutton">Close</button></span>
+            </div>
+        </mat-card>
+    </div>
+</div>

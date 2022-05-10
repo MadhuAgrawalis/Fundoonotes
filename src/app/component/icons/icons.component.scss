@@ -1,0 +1,22 @@
+::ng-deep.mat-menu-panel {
+    max-width: none !important;
+}
+
+.pallete {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-width: 189px;
+    margin-left: 7px;
+    padding: 7px;
+}
+
+.colors:hover {
+    outline-style: solid;
+    outline-width: 1.5px;
+    outline-color: black;
+}
+
+.colors {
+    margin: 3px;
+}

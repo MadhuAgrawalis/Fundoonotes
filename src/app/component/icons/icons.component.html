@@ -1,0 +1,45 @@
+<div *ngIf="!isTrashNotesComponent" fxLayout="row" fxLayoutAlign="space-around end">
+
+    <button mat-icon-button matTooltip="Alert">
+		<img class="icons" src="../../../assets/images/add_alert.svg" alt="Alert">
+	</button>
+    <button mat-icon-button matTooltip="Add Person">
+		<img class="icons" src="../../../assets/images/add_person.svg" alt="person">
+	</button>
+
+    <button mat-icon-button [matMenuTriggerFor]="colormenu" #menuTrigger matTooltip="palette">
+		<img class="icons" src="../../../assets/images/color.svg" alt="palette">
+		<mat-menu #colormenu="matMenu">
+			
+</mat-menu>
+</button>
+
+    <button mat-icon-button matTooltip="Add image">
+		<img class="icons" src="../../../assets/images/insertimg.svg" alt="image">
+	</button>
+
+    <button mat-icon-button matTooltip="Archive">
+		<img class="icons" style="cursor: pointer" (click)="Onarchive()"
+		src="../../../assets/images/archive_black_24dp.svg" alt="archive">
+	</button>
+    <button mat-icon-button *ngIf="isArchiveNotesComponent" matTooltip="Archive">
+		<img class="icons" style="cursor: pointer" (click)="Unarchive()" 
+			src="../../../assets/images/Archive.svg" alt="Unarchive">
+	</button>
+
+    <button mat-icon-button [matMenuTriggerFor]="menu" matTooltip="More">
+		<mat-icon >more_vert</mat-icon>
+		<mat-menu #menu="matMenu">
+			<button mat-menu-item (click)="Deletenote()">Delete note</button>
+    </mat-menu>
+    </button>
+</div>
+
+<div *ngIf="isTrashNotesComponent" fxLayout="row" fxLayoutAlign="start end" fxLayoutGap="25px" style="margin-top: 30px;">
+    <button mat-icon-button (click)="Deleteforever()"><img class="icons"
+				src="./../../../assets/icons/delete_forever_black_24dp (1).svg" alt="delete_forever">
+		</button>
+    <button mat-icon-button (click)="Restorenote()"><img class="icons"
+			src="../../../assets/images/restore.svg" alt="delete_forever">
+	</button>
+</div>

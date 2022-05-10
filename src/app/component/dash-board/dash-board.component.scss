@@ -1,0 +1,68 @@
+.mat-toolbar {
+    background-color: white;
+    height: 70px;
+    border-bottom: 0.5px solid white;
+    box-shadow: 1px 1px 5px white;
+}
+
+.mat-form-field ::ng-deep .mat-form-field-wrapper {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    background-color: rgb(235, 233, 233);
+}
+
+.mat-form-field-flex ::ng-deep .mat-form-field-infix {
+    padding: 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+.mat-form-field-infix ::ng-deep .mat-form-field-label-wrapper {
+    padding: 0px 0px;
+}
+
+.fundoo p {
+    margin-bottom: 0px;
+}
+
+.logo {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.search {
+    flex: 1 1 auto;
+    margin-left: 8%;
+    margin-right: 8%;
+    font-size: 16px;
+}
+
+mat-sidenav {
+    border: none;
+    box-shadow: 1px 1px 5px gray;
+}
+
+mat-sidenav .mat-nav-list a img {
+    margin: 0px 25px 0px 10px;
+}
+
+.mat-nav-list a:hover {
+    background-color: rgb(247, 233, 217);
+    border-radius: 0px 25px 25px 0px;
+}
+
+button:hover {
+    background-color: rgb(247, 233, 217);
+}
+
+@media (max-width: 800px) {
+    .search {
+        margin-left: 10px;
+        margin-right: 0px;
+    }
+}
+
+@media (max-width: 675px) {
+    .search {
+        width: 150px;
+    }
+}

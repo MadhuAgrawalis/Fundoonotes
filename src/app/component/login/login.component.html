@@ -1,0 +1,65 @@
+<div class="login-layout">
+    <div class="container">
+
+        <div class="login-container">
+            <div class="form-head">
+                <div class="title">
+                    <div style="color: #4285F4;">F</div>
+                    <div style="color: #EA4335;">u</div>
+                    <div style="color: #FBBC05;">n</div>
+                    <div style="color: #4285F4;">d</div>
+                    <div style="color: #34A853;">o</div>
+                    <div style="color: #EB4E41;">o</div>
+                </div>
+
+                <br>
+                <h1>sign in</h1>
+            </div>
+            <form class="form-container" [formGroup]="loginFrom" (ngSubmit)="onSubmit()">
+
+
+                <div class="form-group">
+                    <mat-form-field appearance="outline" class="form-field">
+                        <mat-label>Email Or Phone</mat-label>
+                        <input matInput placeholder="Email Or Phone" formControlName="email">
+
+                        <mat-error>enter your email</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field appearance="outline" class="form-field">
+                        <mat-label>Password</mat-label>
+
+                        <input matInput placeholder="Password" formControlName="password">
+
+                        <mat-error>enter your password</mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div class="form-group form-field">
+                    <span class="btn-basic" routerLink="/forgot-password">Forgat Password? </span>
+                </div>
+
+                <div class="form-group form-field">
+                    <section class="example-section">
+                        <mat-checkbox class="example-margin">Show Password</mat-checkbox>
+                    </section>
+                </div>
+                <br>
+
+                <div class="text1">Not your computer? Use Guest mode to sign in privately</div>
+                <span class="text2">Learn more</span>
+
+                <br>
+                <br>
+                <div class="form-group buttons">
+                    <!-- <button mat-button class="btn-basic" routerLink="/forgot-password">Cancel</button> -->
+                    <a class="btn-basic ">Create account</a>
+                    <button class="btn-primary ">Next</button>
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+</div>
